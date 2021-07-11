@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MotorCalcApi.Models;
+using MotorCalcApi.Data;
 
 namespace MotorCalcApi.Models
 {
@@ -13,12 +14,12 @@ namespace MotorCalcApi.Models
         [Route("")]
         public async Task<ActionResult<List<Medidas>>> Get([FromServicesAttribute] DataContext context)
         {
-            var categories = await context.Categories.ToListAsync();
+            var categories = await context.Medidas.ToListAsync();
             return categories;
         }
         [HttpPost]
         [Route("")]
-        public async Task<ActionResult<Category>> Post(
+        public async Task<ActionResult<Medidas>> Post(
             [FromServices] DataContext context,
             [FromBody] Category model)
         {

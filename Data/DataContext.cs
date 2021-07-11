@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using MotorCalcApi.Models;
 
-namespace testeef.Data
+namespace MotorCalcApi.Data
 {
     public class DataContext : DbContext
     {
