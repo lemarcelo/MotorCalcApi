@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace testeef.Models
+namespace MotorCalcApi.Models
 {
     public class Medidas
     {
