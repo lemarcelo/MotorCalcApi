@@ -27,7 +27,7 @@ namespace MotorCalcApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DataContext>(opt => opt.UseInternalServiceProvider("DataBase"));
+            services.AddDbContext<DataContext>(opt => opt.UseApplicationServiceProvider("SEVICE PROVIDER AQUI"));
             services.AddScoped<DataContext, DataContext>();
 
             services.AddControllers();
